@@ -23,7 +23,7 @@ Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entor
 
 2. ¿Cuál es la función de cada fichero?
 
-	* database_setup.pyc: genera la base da datos restaurantmenu.db
+	* database_setup.pyc: genera la base de datos restaurantmenu.db
 	* lotsofmenus.py: puebla restaurantmenu.db
 
 
