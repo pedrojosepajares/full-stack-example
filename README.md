@@ -1,6 +1,7 @@
 # full-stack-example
 Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entorno de desarrollo es Python. También se ha utilizado Flask.
 
+############################
 Prerrequisitos:
 
 1. SQLite: Base de datos SQL simple
@@ -19,6 +20,9 @@ Prerrequisitos:
 	- Instalación de pip: sudo apt install python-pip -y
 	- pip install SQLAlchemy
 
+############################
 
+
+"database_setup.pyc" genera una base de datos y "lotsofmenus.py" la puebla.
 
 
