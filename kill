@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Matando procesos en puerto $1"
+sudo kill $(sudo lsof -t -i:$1)
+
