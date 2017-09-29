@@ -18,6 +18,9 @@ Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entor
 	* SQLAlchemy: Object-Relational Mapping (ORM) para Python
 		* Instalación de pip: sudo apt install python-pip -y
 		* pip install SQLAlchemy
+	
+	* Flask
+		* pip install Flask
 
 
 
