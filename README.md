@@ -23,8 +23,12 @@ Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entor
 		* pip install Flask
 
 
+2. Directorios
 
-2. ¿Cuál es la función de cada fichero?
+	* Templates : templates html utilizados por Flask.
+	* Static : Flask comprueba en este directorio si existen ficheros CSS, JavaScript, de audio o de sonido para incluirlos en el proyecto.
+
+3. ¿Cuál es la función de cada fichero?
 
 	* database_setup.pyc: genera la base de datos restaurantmenu.db
 	* lotsofmenus.py: puebla restaurantmenu.db
