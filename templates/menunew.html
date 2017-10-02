@@ -1,0 +1,25 @@
+<html>
+    <body>
+
+        New menu item<br>
+        
+        <form action="{{url_for('newEdit', restaurant_id = restaurant_id)}}" method = 'POST'>
+
+        <p>Name:</p>
+        <input type='text' size='30' name='name'>
+
+        <p>Description:</p>
+        <input type='text' size='30' name='description'>
+
+        <p>Course:</p>
+        <input type='text' size='30' name='course'>
+
+        <p>Price:</p>
+        <input type='text' size='30' name='price'>
+
+
+        <input type='submit' value='Add'>
+        </form>
+        
+    </body>
+</html>
