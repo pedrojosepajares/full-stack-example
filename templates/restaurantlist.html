@@ -1,28 +1,36 @@
 <html>
+    <head>
+       	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    </head>
     <body>
+        <h1>List of restaurants</h1>
         
-        <h1>Restaurants</h1>
-
-        <a href="{{url_for('restaurantNew')}}">
-        New restaurant
-        </a><br><br>
-
-
         {% for restaurant in restaurants %}
-            {{ restaurant.name }}<br>
+            <div class = item>
+                <p class = name>{{ restaurant.name }}</p>
+                <div class = options>
+                    <a href="{{url_for('menuList', restaurant_id=restaurant.id)}}">
+                    View menu
+                    </a><br>
 
-            <a href="{{url_for('menuList', restaurant_id=restaurant.id)}}">
-            View menu
-            </a><br>
+                    <a href="{{url_for('restaurantEdit', restaurant_id=restaurant.id)}}">
+                    Edit restaurant
+                    </a><br>
 
-            <a href="{{url_for('restaurantEdit', restaurant_id=restaurant.id)}}">
-            Edit restaurant
-            </a><br>
-
-            <a href="{{url_for('restaurantDelete', restaurant_id = restaurant.id)}}">
-            Delete restaurant
-            </a><br>
-            <br>
+                    <a href="{{url_for('restaurantDelete', restaurant_id = restaurant.id)}}">
+                    Delete restaurant
+                    </a><br><br>
+                </div>
+            </div>
         {% endfor %}
+
+        <div class = item>
+        <a class = options href="{{url_for('restaurantNew')}}">
+            <p class = name>New restaurant</p>
+        </a>
+            <div class = options>
+                <br><br><br><br>
+            </div>
+        </div>
     </body>
 </html>
