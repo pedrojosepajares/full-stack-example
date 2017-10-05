@@ -1,25 +1,35 @@
 <html>
+    <head>
+       	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    </head> 
     <body>
+    <h1>Menu Item Edition</h1>
+    <form class = buttonblock action="{{url_for('menuEdit', restaurant_id = restaurant_id, item_id = item.id)}}" method = 'POST'>
+    <table style="width:100%">
+    <tr>
+        <td>Name:</td>
+        <td><input type='text' size='60' name='name' value='{{item.name}}'></td> 
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td><input type='text' size='60' name='description' value='{{item.description}}'></td>
+    </tr>
+    <tr>
+        <td>Course:</td>
+        <td><input type='text' size='60' name='course' value='{{item.course}}'><br></td>
+    </tr>
+        <tr>
+        <td>Price:</td>
+        <td><input type='text' size='60' name='price' value='{{item.price}}'><br></td>
+    </tr>
+    </table>
+    <p>
+           <input type='submit' value='Edit'>
 
-        Edit menu item<br>
-        
-        <form action="{{url_for('menuEdit', restaurant_id = restaurant_id, item_id = item.id)}}" method = 'POST'>
-
-        <p>Name:</p>
-        <input type='text' size='30' name='name' value='{{item.name}}'>
-
-        <p>Description:</p>
-        <input type='text' size='30' name='description' value='{{item.description}}'>
-
-        <p>Course:</p>
-        <input type='text' size='30' name='course' value='{{item.course}}'>
-
-        <p>Price:</p>
-        <input type='text' size='30' name='price' value='{{item.price}}'>
-
-
-        <input type='submit' value='Edit'>
-        </form>
-        
+    </p>
+    </form>
+    <form class = buttonblock action="{{url_for('menuList', restaurant_id = restaurant_id)}}">
+        <input type="submit" value="Cancel" />
+    </form>
     </body>
 </html>

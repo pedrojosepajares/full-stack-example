@@ -1,11 +1,17 @@
 <html>
+    <head>
+          <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    </head>
     <body>
-
-        Delete menu item<br>
-        
+        <h1>Delete Menu Item</h1>                        
         <form action="{{url_for('menuDelete', restaurant_id = restaurant_id, item_id = item.id)}}" method = 'POST'>
+        You are going to delete {{item.name}}. Are you sure?
         <input type='submit' value='Delete'>
         </form>
         
+        <form class = buttonblock action="{{url_for('menuList', restaurant_id = restaurant_id)}}">
+            <input type="submit" value="Cancel" />
+        </form>
+
     </body>
 </html>

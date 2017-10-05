@@ -1,29 +1,44 @@
 <html>
-    <body>
-        
-        <h1>Menu</h1>
-
-        <a href="{{url_for('menuNew', restaurant_id = restaurant_id)}}">
-        New menu item
-        </a><br><br>
+    <head>
+       	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    </head> 
+    <body>   
+        <h1>{{restaurant.name}}'s Menu</h1>
+        <p>
+        <form class = buttonblock action="{{url_for('restaurantList')}}">
+          <input type="submit" value="Back to restaurant list" />
+        </form>
+        <form class = buttonblock action="{{url_for('menuNew', restaurant_id = restaurant.id)}}">
+          <input type="submit" value="Add new menu item" />
+        </form> 
+        </p>
 
 
         {% for item in items %}
-    
-            {{ item.name }}<br>
-            {{ item.course }}<br>            
-            {{ item.description }}<br>
-            {{ item.price }}<br>
-
-            <a href="{{url_for('menuEdit', restaurant_id = restaurant_id, item_id = item.id)}}">
-            Edit item
-            </a><br>
-
-            <a href="{{url_for('menuDelete', restaurant_id = restaurant_id, item_id = item.id)}}">
-            Delete item
-            </a><br>
-            <br>
-            
+        <div class = item>
+            <p class = name>{{ item.name }}</p>
+            <ul>
+                <li>
+                    <div class="tooltip">View description
+                        <span class="tooltiptext">
+                        <p>Course: {{item.course}}</p>
+                        <p>Description: {{item.description}}</p>
+                        <p>Price: {{item.price}}</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <a href="{{url_for('menuEdit', restaurant_id = restaurant.id, item_id = item.id)}}">
+                    Edit menu item
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('menuDelete', restaurant_id = restaurant.id, item_id = item.id)}}">
+                    Delete menu item
+                    </a>
+                </li>
+            </ul>
+        </div>
         {% endfor %}
     </body>
 </html>

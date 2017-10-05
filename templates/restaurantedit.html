@@ -1,12 +1,17 @@
 <html>
+    <head>
+          <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    </head>
     <body>
-
-        Edit restaurant name<br>
+        <h1>Restaurant edition</h1>        
+        <form action="{{url_for('restaurantEdit', restaurant_id = restaurant.id)}}" method = 'POST'>
+            Name:
+            <input type= 'text' size= '30' name= 'name', value = '{{restaurant.name}}'>
+            <input type='submit' value='Rename'>
+        </form>
         
-        <form action="{{url_for('restaurantEdit', restaurant_id=restaurant_id)}}" method = 'POST'>
-        <p>Name:</p>
-        <input type='text' size='30' name='name'>
-        <input type='submit' value='Rename'>
+        <form action="{{url_for('restaurantList')}}">
+            <input type="submit" value="Cancel" />
         </form>
         
     </body>

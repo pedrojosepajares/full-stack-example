@@ -36,10 +36,10 @@ def restaurantNew():
 # Editar restaurante
 @app.route('/restaurants/<int:restaurant_id>/edit/', methods = ['GET', 'POST'])
 def restaurantEdit(restaurant_id):
+    restaurant = session.query(Restaurant).filter_by(id = restaurant_id).one()
     if request.method == 'GET':
-        return render_template('restaurantedit.html', restaurant_id=restaurant_id)
+        return render_template('restaurantedit.html', restaurant=restaurant)
     if request.method == 'POST':
-        restaurant = session.query(Restaurant).filter_by(id = restaurant_id).one()
         restaurant.name = request.form['name']
         session.add(restaurant)
         session.commit()
@@ -49,10 +49,10 @@ def restaurantEdit(restaurant_id):
 # Borrar restaurante
 @app.route('/restaurants/<int:restaurant_id>/delete/', methods = ['GET', 'POST'])
 def restaurantDelete(restaurant_id):
+    restaurant = session.query(Restaurant).filter_by(id = restaurant_id).one()
     if request.method == 'GET':
-        return render_template('restaurantdelete.html', restaurant_id=restaurant_id)
+        return render_template('restaurantdelete.html', restaurant=restaurant)
     if request.method == 'POST':
-        restaurant = session.query(Restaurant).filter_by(id = restaurant_id).one()
         session.delete(restaurant)
         session.commit()
         return redirect(url_for('restaurantList'))
@@ -61,8 +61,9 @@ def restaurantDelete(restaurant_id):
 # Listar menus de un restaurante
 @app.route('/restaurants/<int:restaurant_id>/')
 def menuList(restaurant_id):
+    restaurant = session.query(Restaurant).filter_by(id = restaurant_id).one()
     items = session.query(MenuItem).filter_by(restaurant_id = restaurant_id).all()
-    return render_template('menulist.html', restaurant_id = restaurant_id, items = items)
+    return render_template('menulist.html', restaurant = restaurant, items = items)
 
 # Nuevo item en el menu de un restaurante
 @app.route('/restaurants/<int:restaurant_id>/new/',  methods = ['GET', 'POST'])

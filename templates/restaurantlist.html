@@ -3,34 +3,35 @@
        	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
     </head>
     <body>
-        <h1>List of restaurants</h1>
+        <h1>Restaurant List</h1>
+    <p>    
+    <form action="{{url_for('restaurantNew')}}">
+        <input type="submit" value="Add new restaurant" />
+    </form>
+    </p>
         
         {% for restaurant in restaurants %}
             <div class = item>
                 <p class = name>{{ restaurant.name }}</p>
-                <div class = options>
-                    <a href="{{url_for('menuList', restaurant_id=restaurant.id)}}">
-                    View menu
-                    </a><br>
-
-                    <a href="{{url_for('restaurantEdit', restaurant_id=restaurant.id)}}">
-                    Edit restaurant
-                    </a><br>
-
-                    <a href="{{url_for('restaurantDelete', restaurant_id = restaurant.id)}}">
-                    Delete restaurant
-                    </a><br><br>
-                </div>
+                    <ul>
+                        <li>
+                            <a href="{{url_for('menuList', restaurant_id=restaurant.id)}}">
+                            View menu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('restaurantEdit', restaurant_id=restaurant.id)}}">
+                            Edit restaurant
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('restaurantDelete', restaurant_id = restaurant.id)}}">
+                            Delete restaurant
+                            </a>
+                        </li>
+                    </ul>
             </div>
         {% endfor %}
 
-        <div class = item>
-        <a class = options href="{{url_for('restaurantNew')}}">
-            <p class = name>New restaurant</p>
-        </a>
-            <div class = options>
-                <br><br><br><br>
-            </div>
-        </div>
     </body>
 </html>
