@@ -15,8 +15,10 @@ Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entor
 
 	* Python: instalado por defecto en las distribuciones de Ubuntu
 
+	* Pip:
+		* Instalación de pip: sudo apt install python-pip -y 
+
 	* SQLAlchemy: Object-Relational Mapping (ORM) para Python
-		* Instalación de pip: sudo apt install python-pip -y
 		* pip install SQLAlchemy
 	
 	* Flask
