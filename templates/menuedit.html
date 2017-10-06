@@ -4,7 +4,7 @@
     </head> 
     <body>
     <h1>Menu Item Edition</h1>
-    <form class = buttonblock action="{{url_for('menuEdit', restaurant_id = restaurant_id, item_id = item.id)}}" method = 'POST'>
+    <form action="{{url_for('menuEdit', restaurant_id = restaurant_id, item_id = item.id)}}" method = 'POST'>
     <table style="width:100%">
     <tr>
         <td>Name:</td>
@@ -23,13 +23,14 @@
         <td><input type='text' size='60' name='price' value='{{item.price}}'><br></td>
     </tr>
     </table>
-    <p>
-           <input type='submit' value='Edit'>
-
-    </p>
+    
+    <br>
+    <input type='submit' value='Edit'>  
     </form>
-    <form class = buttonblock action="{{url_for('menuList', restaurant_id = restaurant_id)}}">
+
+    <form  action="{{url_for('menuList', restaurant_id = restaurant_id)}}">
         <input type="submit" value="Cancel" />
     </form>
     </body>
+
 </html>
