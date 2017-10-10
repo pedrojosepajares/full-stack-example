@@ -52,7 +52,7 @@ Igualmente, el usuario puede acceder a la interfaz del sistema visitando la dire
 ## Desarrollo
 El proyecto ha sido realizado utlizando el apoyo proporcionado por los cursos de [Udacity](https://www.udacity.com/)
 
-## Construido con
+## Tecnologías
 Las tecnologías utilizadas para la construcción de este proyecto son:
 * [Python](https://www.python.org/)
 * [SQLite](https://www.sqlite.org/) 
