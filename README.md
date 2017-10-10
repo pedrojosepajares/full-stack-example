@@ -43,4 +43,4 @@ Igualmente, el usuario puede acceder a la interfaz del sistema visitando la dire
 El proyecto ha sido realizado utlizando el apoyo proporcionado por los cursos de [Udacity](https://www.udacity.com/)
 
 ## Autores
-*Pedro José Pajares Ramírez
+* Pedro José Pajares Ramírez
