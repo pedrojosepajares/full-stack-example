@@ -4,8 +4,12 @@ Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entor
 ## Empezando
 Instrucciones para que el usuario pueda tener el sistema corriendo en su máquina local.
 
-## Prerrequisitos e instalación
-	1. ###Sin docker
+### Prerrequisitos e instalación
+El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistema operativo más idoneo para ejecutarlo. Es necesario tener instalado en el sistema: python, pip, SQLAlchemy y Flask:
+
+1. Python
+    apt-get install -y python python-pip
+
 
 1. ¿Qué necesito antes de empezar?
 
