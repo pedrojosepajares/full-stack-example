@@ -1,5 +1,5 @@
 # Restaurant manager
-Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entorno de desarrollo es Python.
+Ejemplo de sistema para la gestión de un conjunto de restaurantes con sus menús donde una base de datos, un cliente y un servidor interactúan. El entorno de desarrollo es Python.
 
 ## Empezando
 Instrucciones para que el usuario pueda tener el sistema corriendo en su máquina local.
@@ -23,12 +23,22 @@ La aplicación se puede ejecutar de una forma muy sencilla utilizando [Docker](h
 Para ejecutar el programa con Python no es necesario realizar instalación. Para ejecutarlo desde un contenedor Docker es necesario contruir la imagen a partir del fichero Dockerfile que se encuentra en el directorio "Docker"
 	
 ```sh
-cd Docker
-docker build -t restaurant-manager .
+docker build -t restaurant-manager ./Docker/
 ```
 
-
 ## Ejecutando la aplicación
+ Para ejecutar la aplición es necesario interpretar el programa "restaurantmanager.py"
+ ```sh
+python restaurantmanager.py
+```
+Una vez introducida la orden, el servidor comienza a esperar conexiones a través del puerto 5000. El usuario puede acceder a la interfaz de gestión de restaurantes y menús a través de la dirección http://localhost:5000/restaurants/ .
+
+Para ejecutar la aplicación desde Docker, hay que generar un contenedor a partir de la imagen generada o descargada
+ ```sh
+docker run -i -t -p 5000:5000 restaurant-manager
+```
+Igualmente, el usuario puede acceder a la interfaz del sistema visitando la dirección http://localhost:5000/restaurants/ .
+
 
 
 1. ¿Qué necesito antes de empezar?
