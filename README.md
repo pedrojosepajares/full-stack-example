@@ -8,7 +8,8 @@ Instrucciones para que el usuario pueda tener el sistema corriendo en su máquin
 El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistema operativo más idoneo para ejecutarlo. Es necesario tener instalado en el sistema: python, pip, SQLAlchemy y Flask:
 
 1. Python
-    ```apt-get install -y python python-pip
+	```
+	apt-get install -y python python-pip
 	```
 
 
