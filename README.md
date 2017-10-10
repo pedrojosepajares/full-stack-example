@@ -26,7 +26,7 @@ Para ejecutar el programa con Python no es necesario realizar instalación. Para
 docker build -t restaurant-manager ./Docker/
 ```
 
-O también, el usuario puede descargar la imagen preconstruida desde mi repositorio DockerHub
+O también, el usuario puede descargar la imagen preconstruida desde mi [repositorio DockerHub](https://hub.docker.com/r/pedrojosepajares/)
 ```sh
 docker pull pedrojosepajares/restaurant-manager
 ```
