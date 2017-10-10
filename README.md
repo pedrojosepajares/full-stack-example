@@ -15,7 +15,7 @@ El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistem
 	```sh
 	pipi pip install SQLAlchemy Flask
 	```
-Si el usuario desea cambiar el esquema de la base de datos, tambíen es necesario tener instalado SQLite siguiendo las instrucciones de su página web https://www.sqlite.org/
+Si el usuario desea cambiar el esquema de la base de datos, tambíen es necesario tener instalado [SQLite](https://www.sqlite.org/), siguiendo las instrucciones de su página web.
 
 La aplicación se puede ejecutar de una forma muy sencilla utilizando [Docker](https://www.docker.com/). Docker se puede instalar siguiendo las instrucciones de [este](https://www.muylinux.com/2016/04/19/tutorial-docker) sencillo tutorial o siguiendo las instrucciones de su sitio web oficial.
 
