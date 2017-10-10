@@ -4,8 +4,8 @@ Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entor
 ## Empezando
 Instrucciones para que el usuario pueda tener el sistema corriendo en su máquina local.
 
-### Prerrequisitos e instalación
-El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistema operativo más idoneo para ejecutarlo. Es necesario tener instalado en el sistema: python, pip, SQLAlchemy y Flask:
+### Prerrequisitos
+El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistema operativo más idoneo para ejecutarlo. Es necesario tener instalado en el sistema: Python, Pip, SQLAlchemy y Flask:
 
 1. Python y Pip
 	```sh
@@ -18,6 +18,18 @@ El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistem
 Si el usuario desea cambiar el esquema de la base de datos, tambíen es necesario tener instalado [SQLite](https://www.sqlite.org/), siguiendo las instrucciones de su página web.
 
 La aplicación se puede ejecutar de una forma muy sencilla utilizando [Docker](https://www.docker.com/). Docker se puede instalar siguiendo las instrucciones de [este](https://www.muylinux.com/2016/04/19/tutorial-docker) sencillo tutorial o siguiendo las instrucciones de su sitio web oficial.
+
+### Instalación
+Para ejecutar el programa con Python no es necesario realizar instalación. Para ejecutarlo desde un contenedor Docker es necesario contruir la imagen a partir del fichero Dockerfile que se encuentra en el directorio "Docker"
+	
+```sh
+cd Docker
+docker build -t restaurant-manager .
+```
+
+
+## Ejecutando la aplicación
+
 
 1. ¿Qué necesito antes de empezar?
 
