@@ -1,4 +1,4 @@
  #!/bin/bash    
-git clone https://github.com/pedrojosepajares/full-stack-example.git
-cd full-stack-example/
+git clone https://github.com/pedrojosepajares/restaurant-manager.git
+cd restaurant-manager/
 python restaurantmanager.py

@@ -26,6 +26,11 @@ Para ejecutar el programa con Python no es necesario realizar instalación. Para
 docker build -t restaurant-manager ./Docker/
 ```
 
+O también, el usuario puede descargar la imagen preconstruida desde mi repositorio DockerHub
+```sh
+docker pull pedrojosepajares/restaurant-manager
+```
+
 ## Ejecutando la aplicación
  Para ejecutar la aplición es necesario interpretar el programa "restaurantmanager.py"
  ```sh
@@ -33,10 +38,15 @@ python restaurantmanager.py
 ```
 Una vez introducida la orden, el servidor comienza a esperar conexiones a través del puerto 5000. El usuario puede acceder a la interfaz de gestión de restaurantes y menús a través de la dirección http://localhost:5000/restaurants/ .
 
-Para ejecutar la aplicación desde Docker, hay que generar un contenedor a partir de la imagen generada o descargada
+Para ejecutar la aplicación desde Docker, hay que generar un contenedor a partir de la imagen generada
  ```sh
 docker run -i -t -p 5000:5000 restaurant-manager
 ```
+o si la imagen se ha descargado desde mi repositorio
+ ```sh
+docker run -i -t -p 5000:5000 pedrojosepajares/restaurant-manager
+```
+
 Igualmente, el usuario puede acceder a la interfaz del sistema visitando la dirección http://localhost:5000/restaurants/ .
 
 ## Desarrollo
