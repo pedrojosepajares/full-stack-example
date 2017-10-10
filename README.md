@@ -11,6 +11,10 @@ El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistem
 	```sh
 	apt-get install -y python python-pip
 	```
+2. SQLAlchemy y Flask
+	```sh
+	pipi pip install SQLAlchemy Flask
+	```
 
 
 1. ¿Qué necesito antes de empezar?
