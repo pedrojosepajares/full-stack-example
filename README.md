@@ -1,6 +1,8 @@
 # Restaurant manager
 Ejemplo donde una base de datos, un cliente y un servidor interactúan. El entorno de desarrollo es Python.
 
+## Empezando
+Instrucciones para que el usuario pueda tener el sistema corriendo en máquina local.
 
 1. ¿Qué necesito antes de empezar?
 
