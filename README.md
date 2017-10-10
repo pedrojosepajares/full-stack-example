@@ -9,6 +9,7 @@ El sistema se ha desarrollado en un entorno Ubuntu, por tanto éste es el sistem
 
 1. Python
     ```apt-get install -y python python-pip
+	```
 
 
 1. ¿Qué necesito antes de empezar?
